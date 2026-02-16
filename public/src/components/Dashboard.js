@@ -12,7 +12,7 @@ const Login = ({ onLogin }) => {
 
     if (email === "admin@gmail.com" && password === "123456") {
       onLogin(true);
-      navigate('/'); // Redirect to home after login
+      navigate('/dashboard');
     } else {
       setError("Invalid email or password");
     }
@@ -34,7 +34,6 @@ const Login = ({ onLogin }) => {
           className="w-full p-2 border rounded mb-4"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          required
         />
 
         <input
@@ -43,25 +42,16 @@ const Login = ({ onLogin }) => {
           className="w-full p-2 border rounded mb-4"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          required
         />
 
-        <button 
-          type="submit"
-          className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700"
-        >
+        <button className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700">
           Login
         </button>
         
-        {/* Add a link back to home */}
-        <div className="text-center mt-4">
-          <button 
-            type="button"
-            onClick={() => navigate('/')}
-            className="text-sm text-blue-600 hover:underline"
-          >
-            Back to Home
-          </button>
+        <div className="mt-4 text-center text-sm text-gray-500">
+          <p>Demo credentials:</p>
+          <p>Email: admin@gmail.com</p>
+          <p>Password: 123456</p>
         </div>
       </form>
     </div>

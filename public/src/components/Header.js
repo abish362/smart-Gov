@@ -15,7 +15,19 @@ function Header({ isAuthenticated, onLogout }) {
           <Link to="/about" className="hover:text-gray-300">About</Link>
           <Link to="/contact" className="hover:text-gray-300">Contact</Link>
           
-          
+          {isAuthenticated ? (
+            <>
+              <Link to="/dashboard" className="hover:text-gray-300">Dashboard</Link>
+              <button 
+                onClick={onLogout}
+                className="hover:text-gray-300 ml-4"
+              >
+                Logout
+              </button>
+            </>
+          ) : (
+            <Link to="/login" className="hover:text-gray-300">Login</Link>
+          )}
         </nav>
       </div>
     </header>

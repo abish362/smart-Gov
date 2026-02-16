@@ -1,0 +1,6 @@
+email,password,name,userId,role
+admin@smartgov.com,123456,Admin User,SG-ADMIN-001,admin
+john.doe@smartgov.com,password123,John Doe,SG-USER-002,user
+sarah.smith@smartgov.com,smith456,Sarah Smith,SG-USER-003,user
+mike.jones@smartgov.com,jones789,Mike Jones,SG-USER-004,user
+test@smartgov.com,test123,Test User,SG-USER-005,user
